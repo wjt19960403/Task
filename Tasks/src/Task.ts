@@ -2,7 +2,7 @@ class Task {
     id:string;
 	name:string;
 	desc:string;
-	status:number;
+	status:TaskStatus;
 	fromNpcId:string;
 	toNpcId:string;
 
@@ -14,5 +14,21 @@ class Task {
 		this.fromNpcId =fromNpcId;
 		this.toNpcId = toNpcId;
 
+	}
+
+	public getTaskId(){
+		return this.id;
+	}
+	public getTaskName(){
+		return this.name;
+	}
+	public getTaskDesc(){
+		return this.desc;
+	}
+	public getTaskStatus(){
+		return this.status;
+	}
+	public getFromNpcId(){
+		return this.fromNpcId;
 	}
 }
