@@ -6,11 +6,11 @@ class Task {
 	fromNpcId:string;
 	toNpcId:string;
 
-    public constructor(id:string,name:string,desc:string,status:number,fromNpcId:string,toNpcId) {
+    public constructor(id:string,name:string,desc:string,fromNpcId:string,toNpcId) {
 		this.id =id;
 		this.name = name;
 		this.desc = desc;
-		this.status = status;
+		this.status = TaskStatus.UNACCEPTABLE;
 		this.fromNpcId =fromNpcId;
 		this.toNpcId = toNpcId;
 
