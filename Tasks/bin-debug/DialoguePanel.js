@@ -30,14 +30,15 @@ var DialoguePanel = (function (_super) {
         this.taskDesc.y = 150;
         this.taskDesc.text = "1111111:";
         this.panelContainer.addChild(this.taskDesc);
-        this.button = new egret.Shape();
-        this.button.graphics.beginFill(0x000000, 0.5);
-        this.button.graphics.drawRect(this.panelContainer.width - 250, this.panelContainer.height - 100, this.panelContainer.width - 150, 50);
-        this.button.graphics.endFill();
-        this.panelContainer.addChild(this.button);
+        this.okButton = new egret.Bitmap();
+        this.okButton = createBitmapByName("ok_png");
+        this.okButton.x = this.panelContainer.width - 210;
+        this.okButton.y = this.panelContainer.height - 100;
+        this.okButton.scaleX = this.okButton.scaleY = 0.5;
+        this.panelContainer.addChild(this.okButton);
         this.panelContainer.y = this.panelContainer.y - 1000;
-        this.button.touchEnabled = true;
-        this.button.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onButtonClick, this);
+        this.okButton.touchEnabled = true;
+        this.okButton.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.onButtonClick, this);
     }
     var d = __define,c=DialoguePanel,p=c.prototype;
     ;
@@ -48,7 +49,7 @@ var DialoguePanel = (function (_super) {
         this.taskDesc.text = taskDesc;
     };
     p.showPanel = function () {
-        console.log("ah");
+        //console.log("ah")
         this.isOpen = !this.isOpen;
         egret.Tween.get(this.panelContainer).to({ y: this.isOpen ? this.panelContainer.y + 1000 : this.panelContainer.y - 1000 }, 500);
     };
