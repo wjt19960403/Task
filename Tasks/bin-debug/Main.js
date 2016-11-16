@@ -108,6 +108,7 @@ var Main = (function (_super) {
         sky.width = stageW;
         sky.height = stageH;
         this.addChild(new initTaskInfo(this.stage.stageWidth, this.stage.stageHeight));
+        this.setChildIndex(sky, 0);
     };
     return Main;
 }(egret.DisplayObjectContainer));

@@ -1,8 +1,8 @@
 class TaskService {
     private static instance;
     private static count = 0;
-    private observerList:Observer[];
-	private taskList:Task[];
+    private observerList:Observer[]=[];
+    private taskList: { [index: string]: Task } = {};
 
     constructor() {
         TaskService.count++;
@@ -17,12 +17,15 @@ class TaskService {
             TaskService.instance = new TaskService();
         return TaskService.instance;
     }
+    public getTaskByCustomRole(rule: Function): Task[] {
+        return rule(this.taskList);//rule(this.taskList);
+    }
 
     public addTask(value: Task) {
-        // if (value == null)
-        //     throw value + "isNull";
+        if (value == null)
+            throw value + "isNull";
         // if (value == this.taskList[value.id])
-        //     throw value.id + "isExist";
+            //throw value.id + "isExist";
         this.taskList[value.id] = value;
     }
 

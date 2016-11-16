@@ -2,18 +2,24 @@ var NPC = (function (_super) {
     __extends(NPC, _super);
     function NPC(Id, Name, x, y, openPanel) {
         _super.call(this);
+        this.taskList = {};
         this.npcId = Id;
         this.npcName = Name;
         this.initNpcApperance(x, y);
         var onClick = function () {
-            this.onNpcClick(openPanel);
+            this.onNPCClick(openPanel);
         };
         this.touchEnabled = true;
         this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, onClick, this);
     }
     var d = __define,c=NPC,p=c.prototype;
     p.initNpcApperance = function (x, y) {
-        this.npcApperance = createBitmapByName("npc_01_jpg");
+        if (this.npcId == "npc_01") {
+            this.npcApperance = createBitmapByName("npc_1_png");
+        }
+        else if (this.npcId == "npc_02") {
+            this.npcApperance = createBitmapByName("npc_2_png");
+        }
         this.npcApperance.x = x;
         this.npcApperance.y = y;
         this.addChild(this.npcApperance);

@@ -3,7 +3,7 @@ class TaskPanel extends egret.DisplayObjectContainer implements Observer {
     private backgroundPicture: egret.Shape;
     public textField: egret.TextField;
     private button: egret.Shape;
-    public taskList: Task[];
+    private taskList: { [index: string]: Task } = {};
 
    
 
@@ -42,7 +42,7 @@ class TaskPanel extends egret.DisplayObjectContainer implements Observer {
 
     public updateTask(task: Task) {
         this.taskList[task.id] = task;
-        this.textField.text = this.taskList[task.id].Name + task.status.toString();
+        this.textField.text = this.taskList[task.id].name + task.status.toString();
     }
     
 

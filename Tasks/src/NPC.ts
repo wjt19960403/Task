@@ -3,7 +3,7 @@ class NPC extends egret.DisplayObjectContainer implements Observer {
     private npcName:string;
     private emoji:egret.Bitmap;
     private npcApperance: egret.Bitmap;
-    private taskList: Task[];
+    private taskList: { [index: string]: Task } = {};
 
     public constructor(Id:string,Name:string,x:number,y:number,openPanel:DialoguePanel){
         super();
@@ -12,15 +12,20 @@ class NPC extends egret.DisplayObjectContainer implements Observer {
          this.initNpcApperance(x, y);
 
         var onClick: Function = function () {
-            this.onNpcClick(openPanel);
+            this.onNPCClick(openPanel);
         }
         this.touchEnabled = true;
         this.addEventListener(egret.TouchEvent.TOUCH_BEGIN, onClick, this);
     }
 
     private initNpcApperance(x: number, y: number) {
-        this.npcApperance = createBitmapByName("npc_01_jpg");
+        if(this.npcId == "npc_01"){
+            this.npcApperance = createBitmapByName("npc_1_png");
+        }else if(this.npcId == "npc_02"){
+            this.npcApperance = createBitmapByName("npc_2_png");
+        }
 
+        
         this.npcApperance.x = x;
         this.npcApperance.y = y;
         this.addChild(this.npcApperance);

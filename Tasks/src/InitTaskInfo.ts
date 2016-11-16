@@ -22,7 +22,7 @@ class initTaskInfo extends egret.DisplayObjectContainer{
         taskService.addObserver(npc_FriendNpc01);
         npc_FriendNpc01.getTask();
 
-        var npc_FriendNpc02 = new NPC("npc_02", "精壮的老汉", 360, 240, panel_Npc);
+        var npc_FriendNpc02 = new NPC("npc_02", "精壮的老汉", 360, 680, panel_Npc);
         this.addChild(npc_FriendNpc02);
         taskService.addObserver(npc_FriendNpc02);
         npc_FriendNpc02.getTask();

@@ -1,5 +1,7 @@
 var TaskService = (function () {
     function TaskService() {
+        this.observerList = [];
+        this.taskList = {};
         TaskService.count++;
         if (TaskService.count > 1)
             throw "OverUse";
@@ -15,11 +17,14 @@ var TaskService = (function () {
             TaskService.instance = new TaskService();
         return TaskService.instance;
     };
+    p.getTaskByCustomRole = function (rule) {
+        return rule(this.taskList); //rule(this.taskList);
+    };
     p.addTask = function (value) {
-        // if (value == null)
-        //     throw value + "isNull";
+        if (value == null)
+            throw value + "isNull";
         // if (value == this.taskList[value.id])
-        //     throw value.id + "isExist";
+        //throw value.id + "isExist";
         this.taskList[value.id] = value;
     };
     p.addObserver = function (value) {

@@ -125,6 +125,7 @@ class Main extends egret.DisplayObjectContainer {
         sky.height = stageH;
 
          this.addChild(new initTaskInfo(this.stage.stageWidth, this.stage.stageHeight));
+         this.setChildIndex(sky,0);
     }
 }
 

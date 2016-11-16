@@ -2,6 +2,7 @@ var TaskPanel = (function (_super) {
     __extends(TaskPanel, _super);
     function TaskPanel(x, y) {
         _super.call(this);
+        this.taskList = {};
         this.isOpen = false;
         this.panelContainer = new egret.DisplayObjectContainer();
         this.panelContainer.x = 0;
@@ -31,7 +32,7 @@ var TaskPanel = (function (_super) {
     var d = __define,c=TaskPanel,p=c.prototype;
     p.updateTask = function (task) {
         this.taskList[task.id] = task;
-        this.textField.text = this.taskList[task.id].Name + task.status.toString();
+        this.textField.text = this.taskList[task.id].name + task.status.toString();
     };
     p.showPanel = function () {
         this.isOpen = !this.isOpen;
