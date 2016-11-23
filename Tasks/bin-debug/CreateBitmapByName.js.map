@@ -1,1 +1,0 @@
-{"version":3,"file":"CreateBitmapByName.js","sourceRoot":"","sources":["../src/CreateBitmapByName.ts"],"names":[],"mappings":"AAAA,4BAA4B,IAAY;IACpC,IAAI,MAAM,GAAG,IAAI,KAAK,CAAC,MAAM,EAAE,CAAC;IAChC,IAAI,OAAO,GAAkB,GAAG,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC;IAC9C,MAAM,CAAC,OAAO,GAAG,OAAO,CAAC;IACzB,MAAM,CAAC,MAAM,CAAC;AAClB,CAAC"}

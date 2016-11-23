@@ -1,0 +1,60 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,question_png,notice_png,panel_jpg,ok_png,npc_1_png,npc_2_png,monster_png,woman_png,man_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "question_png",
+			"type": "image",
+			"url": "assets/question.png"
+		},
+		{
+			"name": "notice_png",
+			"type": "image",
+			"url": "assets/notice.png"
+		},
+		{
+			"name": "panel_jpg",
+			"type": "image",
+			"url": "assets/panel.jpg"
+		},
+		{
+			"name": "ok_png",
+			"type": "image",
+			"url": "assets/ok.png"
+		},
+		{
+			"name": "npc_1_png",
+			"type": "image",
+			"url": "assets/npc_1.png"
+		},
+		{
+			"name": "npc_2_png",
+			"type": "image",
+			"url": "assets/npc_2.png"
+		},
+		{
+			"name": "monster_png",
+			"type": "image",
+			"url": "assets/monster.png"
+		},
+		{
+			"name": "woman_png",
+			"type": "image",
+			"url": "assets/woman.png"
+		},
+		{
+			"name": "man_png",
+			"type": "image",
+			"url": "assets/man.png"
+		}
+	]
+}
