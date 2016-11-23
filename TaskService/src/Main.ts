@@ -164,7 +164,7 @@ class Main extends egret.DisplayObjectContainer {
         task_1.fromNpcId = "NPC_2";
         task_1.toNpcId = "NPC_2";
         task_1.desc = "再次跟下面的NPC对话，接任务后击杀怪物";
-        task_1.NPCTaskTalk = "能不能帮我杀掉10个怪物，我快头疼死了";
+        task_1.NPCTaskTalk = "能不能帮我杀掉10个怪物，我快头疼死了!";
         task_1.total = 10;
         task_1.status = TaskStatus.UNACCEPTABLE;
 
